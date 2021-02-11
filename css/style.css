@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/***************************************************************** Header *****************************************************************/
+.logo img{
+    height: 25%;
+    width: 25%;
+    object-fit: contain;
+}
+
+.header {
+    background-color: orange;
+    padding: 0 20px;
+}
+
+.header ul {
+    height: 120px;
+}
+
+.header a{
+    padding: 0 20px;
+}
+
+/***************************************************************** gallery *****************************************************************/
+
+.gallery-img {
+    height: 250px;
+    margin: 5px;
+}
+
+
+/**************************************************************** Meme-editor *****************************************************************/
+
+#my-canvas {
+    outline: 2px solid rgb(255, 255, 255);
+}
+
+/* HELPERS */
+
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}

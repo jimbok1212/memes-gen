@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memes Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel='icon' href="favicon/favicon.ico" />
+</head>
+<body onload="init()">
+
+    <header class="header flex justify-between align-center">
+        <div class="logo"><img src="LOGO/LOGO.png"></div>
+        <ul class="main-menu clean-list flex align-center">
+            <li><a href="#" onclick="onGallery()">Gallery</a></li>
+            <li><a href="#">Memes</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </header>
+
+    <main class="images-container"></main>
+
+    <main class="meme-editor flex hidden">
+        <section class="canvas-container">
+            <canvas id="my-canvas" width="600" height="600"></canvas>
+        </section>
+        <section class="control-box">
+            <input type="text" placeholder="text line" oninput="updateText(this)">
+            <button onclick="onNewLine()">Add</button>
+            <button onclick="onRemoveLine()">🗑</button>
+            <button onclick="onChangeSize(2)">➕</button>
+            <button onclick="onChangeSize(-2)">➖</button>
+            <input type="color" onchange="onChangeColor(this)">
+            <button><a href="#" onclick="downloadCanvas(this)" download="">Download</a></button>
+            <button class="moveUp" onclick="moveUp()">Up</button>
+            <button class="moveDown" onclick="moveDown()">Down</button>
+            <button class="moveUp" onclick="moveLeft()">Left</button>
+            <button class="moveUp" onclick="moveRight()">Right</button>
+        </section>
+    </main>
+
+    <script src="js/meme-service.js"></script>
+    <script src="js/meme-controller.js"></script>
+</body>
+</html>
